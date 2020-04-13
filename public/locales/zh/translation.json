@@ -1,0 +1,64 @@
+{
+    "url": "dawei.ca",
+    "email_address": "contact@dawei.ca",
+    "name": "理查森大卫",
+    "firstname": "理查森",
+    "lastname": "大卫",
+    "title": "程序猿",
+    "navigation": {
+        "about": "关于",
+        "discover": "发现",        
+        "blog": "发现",
+        "photos": "相片",
+        "contact": "发现",
+        "previous": "上一个",
+        "next": "下一个"
+    },
+    "pages": {
+        "about": {
+            "title": "热爱科技",
+            "info": "<p>我是一个居住于温尼伯热衷于科技的程序猿<\/p>\n\n<h4><\/h4>\n\n<p>From front end web and mobile development with <strong>React<\/strong> and <strong>React Native<\/strong>, to backend API's running <strong>Rails<\/strong>, <strong>ExpressJS<\/strong>. I have experience with <strong>LAMP<\/strong> and <strong>MEAN<\/strong> stacks, as well as cloud solutions like <strong>Google Cloud Platform</strong> and <strong>Firebase<\/strong>. Over the years I have developed a deep understanding of computer science and have applied myself in both theoretical and practical applications.<\/p>\n\n<h4><\/h4>\n\n<h3>我酷爱生活 学习及科技<\/h3>\n\n<p><\/p>\n"
+        },
+        "discover": {
+            "title": "热爱探索",
+            "subtitle": "我相信研究和发现",
+            "experience": "我工作过的地方",
+            "intro": "[zh] I don't just write code. I write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
+            "summary": "[zh] I don't wait for the future. I make it. Swipe left to learn more about where I have worked and what I do.",
+            "jobs": {
+                "transit": {
+                    "title": "温尼伯过境",
+                    "position": "程序员分析师",
+                    "visit": "访问温尼伯过境",
+                    "description": "Foo <strong>Bar</strong> Baz"
+                }
+            }            
+        },
+        "blog": {
+            "title": "热爱分享",
+            "coming soon": "即将来临..."
+        },
+        "contact": {
+            "title": "热爱交流",
+            "subtitle": "所以您想取得联系。",
+            "intro": "这是与我联系的最佳方法的简要指南",
+            "email": "通过电子邮件与我联系，如果：",
+            "social": "通过社交媒体与我联系，如果：",
+            "consult": "您要我与您协商一个项目",
+            "history": "您正在寻找更详细的职业经历或有其他业务问题",
+            "feedback": "您还有与此网站有关的任何其他反馈",
+            "send_an_email": "如果适合您的查询，请发送电子邮件至",
+            "say_hello": "你想打个招呼",
+            "know_more_about_me": "您想说了解更多关于我的信息",
+            "any_other_reason": "任何其他原因",
+            "find_me_as": "线上我叫"
+        },
+        "photos": {
+            "title": "a lover of art"
+        }        
+    },
+    "notifications": {
+        "contact": "你想联系我吗？",
+        "contact_button": "联络我"
+    }        
+}

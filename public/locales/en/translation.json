@@ -1,0 +1,64 @@
+{
+    "url": "daverichardson.ca",
+    "email_address": "contactme@daverichardson.ca",
+    "name": "dave.richardson",
+    "firstname": "dave",
+    "lastname": "richardson",
+    "title": "full stack developer", 
+    "navigation": {
+        "about": "About",
+        "discover": "Discover",        
+        "blog": "Blog",
+        "photos": "Photos",
+        "contact": "Contact",
+        "previous": "Back",
+        "next": "Next"
+    },   
+    "pages": {
+        "about": {
+            "title": "a lover of tech",
+            "info": "<p>Hi, I&#8217;m a full stack software developer in <em>Winnipeg, MB<\/em> and I <em>really<\/em> like technology.<\/p>\n\n<h4><\/h4>\n\n<p>From front end web and mobile development with <strong>React<\/strong> and <strong>React Native<\/strong>, to backend API's running <strong>Rails<\/strong>, <strong>ExpressJS<\/strong>. I have experience with <strong>LAMP<\/strong> and <strong>MEAN<\/strong> stacks, as well as cloud solutions like <strong>Google Cloud Platform</strong> and <strong>Firebase<\/strong>. Over the years I have developed a deep understanding of computer science and have applied myself in both theoretical and practical applications.<\/p>\n\n<h4><\/h4>\n\n<h3>I have a passion for life, learning, and technology.<\/h3>\n\n<p><\/p>\n"
+        },
+        "discover": {
+            "title": "a lover of exploration",
+            "subtitle": "I believe in research & discovery",
+            "experience": "Places I have worked",
+            "intro": "I don't just write code. I write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
+            "summary": "I don't wait for the future. I make it. Swipe left to learn more about where I have worked and what I do.",
+            "jobs": {
+                "transit": {
+                    "title": "winnipeg transit",
+                    "position": "Programmer Analyst II",
+                    "visit": "Visit Winnipeg Transit",
+                    "description": "Many people rely on public transit.<br /><br />At <strong>Winnipeg Transit</strong>, my focus is on making real-time schedule information accessible through a variety of tools available to the public.<br /><br />I function as a programmer / analyst on the <strong>Public Facing Apps</strong> team where I've gained experience with Ruby. I specialize in JavaScript technologies; specifically React and NodeJS.<br /><br />In addition, I have a strong passion for emerging technologies, so I enjoylearning and testing new tools with my team."
+                }
+            }            
+        },
+        "blog": {
+            "title": "a lover of sharing",
+            "coming soon": "coming soon..."
+        },
+        "contact": {
+            "title": "a lover of communication",
+            "subtitle": "So you'd like to get in touch.",
+            "intro": "To save us both time, I've put together a brief guide to help you find the best methods to contact me.",
+            "email": "You should contact me by email if:",
+            "social": "You should contact me by social media if:",
+            "consult": "You'd like me to consult on a project with you",
+            "history": "You'd like a more detailed career history or have other business questions",
+            "feedback": "You have any other feedback related to this site",
+            "send_an_email": "If this fits your enquiry, send an email to",
+            "say_hello": "You want to say hello",
+            "know_more_about_me": "You want to know more about me",
+            "any_other_reason": "Any other reason",
+            "find_me_as": "Find me everywhere as"
+        },
+        "photos": {
+            "title": "a lover of art"
+        }
+    },
+    "notifications": {
+        "contact": "Looking to get in touch?",
+        "contact_button": "Contact Me"
+    }    
+}

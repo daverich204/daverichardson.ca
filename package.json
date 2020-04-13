@@ -1,0 +1,81 @@
+{
+  "name": "daverichardson.ca",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@material-ui/core": "^3.9.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "babel-polyfill": "6.26.0",
+    "chalk": "^2.4.2",
+    "compression": "1.7.2",
+    "cross-env": "5.2.0",
+    "express": "^4.16.3",
+    "fontfaceobserver": "2.0.13",
+    "hash-it": "^4.0.5",
+    "history": "4.7.2",
+    "hoist-non-react-statics": "2.5.5",
+    "i18next": "^19.3.2",
+    "i18next-browser-languagedetector": "^4.0.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "immutable": "3.8.2",
+    "invariant": "2.2.4",
+    "ip": "1.1.5",
+    "lodash": "^4.17.15",
+    "mdi-material-ui": "^5.13.0",
+    "minimist": "1.2.0",
+    "offline-plugin": "^5.0.7",
+    "prop-types": "^15.7.2",
+    "raf": "^3.4.1",
+    "react": "^16.13.0",
+    "react-awesome-slider": "^4.1.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "5.2.0",
+    "react-i18next": "^11.3.3",
+    "react-image-gallery": "^1.0.6",
+    "react-instagram-embed": "^1.5.0",
+    "react-loadable": "5.4.0",
+    "react-loading-skeleton": "^0.5.0",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.3.1",
+    "react-router-redux": "5.0.0-alpha.9",
+    "react-scripts": "3.4.0",
+    "react-swipeable-views": "^0.12.18",
+    "react-swipeable-views-utils": "^0.12.18",
+    "react-textfit": "^1.1.0",
+    "react-typist": "^2.0.5",
+    "rebloggr": "^0.1.0",
+    "redux": "4.0.0",
+    "redux-immutable": "4.0.0",
+    "redux-saga": "0.16.0",
+    "reselect": "3.0.1",
+    "sanitize.css": "4.1.0",
+    "styled-components": "3.3.2",
+    "uniqid": "^5.2.0",
+    "warning": "4.0.1",
+    "whatwg-fetch": "2.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
