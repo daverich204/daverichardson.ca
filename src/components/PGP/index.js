@@ -5,6 +5,7 @@
  */
 import React, { useEffect, useState } from 'react';
 import Forum from 'mdi-material-ui/Forum';
+import Lock from  'mdi-material-ui/Lock';
 import { useTranslation } from 'react-i18next';
 
 import TypingText from '../Layout/TypingText';
@@ -19,13 +20,15 @@ import {
   backgroundColorLight, accentColorDarkGradient
 } from '../../static/Colors';
 import { shadow } from '../../static/Accents';
+import BackgroundAvatar from "../BackgroundAvatar";
+import ContactOptionContainer from "../Contact/ContactOptionContainer";
 
 const styles = {
   forum: {
     color: backgroundContrastLight,
   },
   pgp_key:   {
-    background: `${backgroundDarkGradient}`,
+    // background: `${backgroundContrastLight}`,
     borderRadius: '0.25rem',
     boxShadow: shadow,
     padding: '1rem',
@@ -33,6 +36,7 @@ const styles = {
     fontSize: "0.7rem",
     overflow: 'auto',
     textAlign: 'left',
+    whiteSpace:  'pre',
   }
 };
 
@@ -40,12 +44,15 @@ const styles = {
 export default function PGP() {
   const { t } = useTranslation('translation');
 
-  const [PGPKey, setPGPKey] = useState(true);
+  const [PGPKey, setPGPKey] = useState(null);
 
   useEffect(() => {
-    fetch('/pgp_key.txt')
-        .then((r)  => r.text())
-        .then((pgp_key) => setPGPKey(pgp_key))
+    if (!PGPKey){
+      fetch('/pgp_key.txt')
+          .then((r)  => r.text())
+          .then((pgp_key) => setPGPKey(pgp_key));
+    }
+
   }, [])
 
   return (
@@ -58,22 +65,24 @@ export default function PGP() {
               {t('So you wanna talk securely?')}
             </TypingText>
             <div className="shrink cell">
-              <Forum className="titleIcon" style={styles.forum} />
+              <Lock className="titleIcon" style={styles.forum} />
             </div>
           </div>
         </h1>
       </div>
       <div className="grid-x">
-        <div className="auto cell flex" />
-        <span className="text-align-right cell medium-4 grid-x">
+        <div className="auto cell" />
+        <span className="text-align-right medium-10 cell grid-x">
           <div className="cell">
-            <br />
-            {t('Feel free to use my PGP key')}
-            <pre style={styles.pgp_key}>
-              {PGPKey}
-            </pre>
-            <br />
+            {t('Feel free to use my PGP key...')}
           </div>
+          <br />
+          <ContactOptionContainer className="large-5 large-offset-7 cell">
+            <div style={styles.pgp_key}>
+              {PGPKey}
+            </div>
+          </ContactOptionContainer>
+
         </span>
       </div>
       <br />

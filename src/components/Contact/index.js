@@ -75,9 +75,11 @@ export default function Contact() {
                 </a>.
               </p>
               <br />
+              <br />
               <h3>
                 Feel free to use my&nbsp;
                 <Link to={"/pgp"} style={{textDecoration: 'underline'}}>pgp key</Link>
+                {/*<a href={"#"} style={{textDecoration: 'underline'}} onClick={() => setDialogOpen(true)}>pgp key</a>*/}
                 , if you're into that sort of thing...
               </h3>
             </div>

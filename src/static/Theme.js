@@ -28,7 +28,6 @@ const MyCustomTheme = createMuiTheme({
     fontFamily: '"Inconsolata", "Roboto", sans-serif',
     fontSize: 15,
   },
-
   palette: {
     primary: {
       light: primaryColorLight,
@@ -46,7 +45,6 @@ const MyCustomTheme = createMuiTheme({
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },
-
   overrides: {
     MuiAppBar: {
       colorPrimary: {
@@ -86,6 +84,21 @@ const MyCustomTheme = createMuiTheme({
         backgroundColor: 'transparent',
       },
     },
+    MuiDialog: {
+      paper: {
+        background: backgroundDarkGradient,
+      }
+    },
+    MuiDialogTitle:{
+      root: {
+        color: 'red',
+      }
+    },
+    MuiTypography: {
+      root: {
+        color:  'red',
+      }
+    }
   },
 });
 
