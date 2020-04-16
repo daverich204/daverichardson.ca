@@ -15,22 +15,36 @@
         "next": "Next"
     },   
     "pages": {
+        "pgp":{
+            "title": "so you wanna talk securely?",
+            "subtitle": "Feel free to use my PGP key when emailing me..."
+        },
         "about": {
             "title": "a lover of tech",
-            "info": "<p>Hi, I&#8217;m a full stack software developer in <em>Winnipeg, MB<\/em> and I <em>really<\/em> like technology.<\/p>\n\n<h4><\/h4>\n\n<p>From front end web and mobile development with <strong>React<\/strong> and <strong>React Native<\/strong>, to backend API's running <strong>Rails<\/strong>, <strong>ExpressJS<\/strong>. I have experience with <strong>LAMP<\/strong> and <strong>MEAN<\/strong> stacks, as well as cloud solutions like <strong>Google Cloud Platform</strong> and <strong>Firebase<\/strong>. Over the years I have developed a deep understanding of computer science and have applied myself in both theoretical and practical applications.<\/p>\n\n<h4><\/h4>\n\n<h3>I have a passion for life, learning, and technology.<\/h3>\n\n<p><\/p>\n"
+            "info": "<p>Hi, I&#8217;m a full stack software developer in <em>Winnipeg, MB<\/em> and I <em>really<\/em> like technology.<\/p>\n\n<h4><\/h4>\n\n<p>I enjoy everything from front end web and mobile development with <strong>React</strong> and <strong>React Native</strong>, to backend API's running <strong>Rails</strong>, <strong>ExpressJS</strong>. I have experience with a variety of software stacks, and am enjoying playing with cloud solutions like <strong>Google Cloud Platform</strong> and <strong>Firebase</strong>. Over the years I have developed a deep passion for software development and have applied myself in both theoretical and practical applications.<\/p>\n\n<h4><\/h4>\n\n<h3>I have a passion for life, learning, and technology.<\/h3>\n\n<p><\/p>\n"
         },
         "discover": {
             "title": "a lover of exploration",
             "subtitle": "I believe in research & discovery",
             "experience": "Places I have worked",
-            "intro": "I don't just write code. I write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
+            "intro": "I don't just write code, I aim to write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
             "summary": "I don't wait for the future. I make it. Swipe left to learn more about where I have worked and what I do.",
             "jobs": {
                 "transit": {
                     "title": "winnipeg transit",
                     "position": "Programmer Analyst II",
                     "visit": "Visit Winnipeg Transit",
-                    "description": "Many people rely on public transit.<br /><br />At <strong>Winnipeg Transit</strong>, my focus is on making real-time schedule information accessible through a variety of tools available to the public.<br /><br />I function as a programmer / analyst on the <strong>Public Facing Apps</strong> team where I've gained experience with Ruby. I specialize in JavaScript technologies; specifically React and NodeJS.<br /><br />In addition, I have a strong passion for emerging technologies, so I enjoylearning and testing new tools with my team."
+                    "description": "Many people in the world rely on public transit.<br /><br />At <strong>Winnipeg Transit<\/strong>, my focus is on making schedule information accessible through a variety of tools available to the public.<br /><br />I function as a programmer / analyst on the <strong>Public Facing Apps</strong> team.  I have a strong passion for emerging technologies, so I enjoy learning and testing new tools with my team."
+                },
+                "dawei": {
+                    "title": "dawei information solutions",
+                    "position": "Owner, Lead Developer",
+                    "description": "Why not do what you love?<br /><br /><strong>Dawei Information Solutions</strong> made having a web presence easy for everyone.<br /><br />I started <strong>Dawei Information Solutions</strong> to help reduce the entry barrier for small to medium sized businesses and provide an easy, cost effective way to have websites and general IT support.<br /><br />I've moved on from <strong>Dawei</strong> recently, and am now working full-time at <strong>Winnipeg Transit</strong>"
+                },
+                "enigma": {
+                    "title": "enigma networks",
+                    "position": "Lead Software Developer",
+                    "description": "I love working with small businesses.<br /><br /><strong>Enigma Networks</strong> was a small IT shop in Winnipeg that provided small businesses with IT services such as custom web based software applications.<br /><br />I started using PHP to develop and deploy production ready solutions for a variety of projects from online stores, to reservation and inventory management systems for local businesses.<br /><br />This is where I started to delve into the vast world of NodeJS and Angular."
                 }
             }            
         },
@@ -51,7 +65,9 @@
             "say_hello": "You want to say hello",
             "know_more_about_me": "You want to know more about me",
             "any_other_reason": "Any other reason",
-            "find_me_as": "Find me everywhere as"
+            "find_me_as": "Find me everywhere as",
+            "feel_free_to_use": "Feel free to use my ",
+            "if_you_want": ", if you're into that sort of thing..."
         },
         "photos": {
             "title": "a lover of art"

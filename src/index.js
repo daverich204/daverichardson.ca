@@ -17,7 +17,11 @@ import { I18nextProvider } from 'react-i18next';
 import createHistory from 'history/createBrowserHistory';
 
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { createMuiTheme, ThemeProvider } from '@material-ui/styles';
+
 import CustomTheme from './static/Theme';
+
+
 
 import 'raf/polyfill';
 
@@ -53,16 +57,16 @@ const MOUNT_NODE = document.getElementById('root');
 
 const render = () => {
   ReactDOM.render(
-    <Provider store={store}>      
+    <Provider store={store}>
+      <MuiThemeProvider theme={CustomTheme}>
         <ConnectedRouter history={history}>
-            <MuiThemeProvider theme={CustomTheme}>
-            <I18nextProvider i18n={ i18n }>
-              <Suspense fallback={<Loader />}>
-                <App />
-              </Suspense>
-              </I18nextProvider>
-            </MuiThemeProvider>
-        </ConnectedRouter>      
+          <I18nextProvider i18n={ i18n }>
+            <Suspense fallback={<Loader />}>
+              <App />
+            </Suspense>
+            </I18nextProvider>
+        </ConnectedRouter>
+      </MuiThemeProvider>
     </Provider>,
     MOUNT_NODE,
   );

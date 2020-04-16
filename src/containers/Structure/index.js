@@ -43,7 +43,12 @@ import Layout from '../../components/Layout';
 import IndeterminateProgressMotion from '../../components/IndeterminateProgressMotion';
 
 import DrawerButton from './DrawerButton';
+import DrawerCard from './DrawerCard';
 import AppBarButton from './AppBarButton';
+import HeaderLogo from "../../components/Layout/HeaderLogo";
+import logo from "../../images/daverichardson_logo_small.png";
+
+import { Toolbar } from "@material-ui/core";
 
 const styles = {
   drawerChevronLeft: {
@@ -71,7 +76,7 @@ class Structure extends React.Component {
       dialogMessage,
       openMenu,
       isMenuOpen,
-      t,
+      t, i18n,
       ...rest
     } = this.props;
 
@@ -125,17 +130,21 @@ class Structure extends React.Component {
           onOpen={openMenu}
         >
           <DrawerButton
-            title=""
+            title={''}
             icon={<ChevronLeft style={styles.drawerChevronLeft} />}
             onClick={openMenu}
             to="#"
           />
           <Divider />
+
+          <DrawerCard />
+
           <DrawerButton title={t("navigation.about")} onClick={openMenu} />
           <DrawerButton title={t("navigation.discover")} to="/discover" onClick={openMenu} />
           <DrawerButton title={t("navigation.blog")} to="/blog" onClick={openMenu} />
-          {/* <DrawerButton title={t("navigation.photos")} to="/photos" onClick={openMenu} /> */}
-          <DrawerButton title={t("navigation.contact")} to="/contact" onClick={openMenu} />          
+          <DrawerButton title={t("navigation.contact")} to="/contact" onClick={openMenu} />
+          <Divider />
+
         </SwipeableDrawer>
         <Layout
           openNotif={openNotif}

@@ -67,6 +67,7 @@ export default function Contact() {
                   {t('pages.contact.feedback')}
                 </li>
               </ul>
+              <br />
               <p>
                 {t('pages.contact.send_an_email')}
                 &nbsp;
@@ -75,12 +76,11 @@ export default function Contact() {
                 </a>.
               </p>
               <br />
-              <br />
               <h3>
-                Feel free to use my&nbsp;
+                {t('pages.contact.feel_free_to_use')}
                 <Link to={"/pgp"} style={{textDecoration: 'underline'}}>pgp key</Link>
                 {/*<a href={"#"} style={{textDecoration: 'underline'}} onClick={() => setDialogOpen(true)}>pgp key</a>*/}
-                , if you're into that sort of thing...
+                {t('pages.contact.if_you_want')}
               </h3>
             </div>
           </ContactOptionContainer>

@@ -5,6 +5,7 @@ export const primaryColorLight = '#04DBFF';
 export const accentColor = '#DA0443';
 export const accentColorDark = '#C0043B';
 export const accentColorLight = '#E70447';
+
 export const accentColorDarkGradient = `linear-gradient(
   to bottom right,
   ${accentColor},

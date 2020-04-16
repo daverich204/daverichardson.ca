@@ -15,22 +15,36 @@
         "next": "下一个"
     },
     "pages": {
+        "pgp":{
+            "title": "你想私下聊吗?",
+            "subtitle": "随时使用我的PGP密钥..."
+        },
         "about": {
             "title": "热爱科技",
-            "info": "<p>我是一个居住于温尼伯热衷于科技的程序猿<\/p>\n\n<h4><\/h4>\n\n<p>From front end web and mobile development with <strong>React<\/strong> and <strong>React Native<\/strong>, to backend API's running <strong>Rails<\/strong>, <strong>ExpressJS<\/strong>. I have experience with <strong>LAMP<\/strong> and <strong>MEAN<\/strong> stacks, as well as cloud solutions like <strong>Google Cloud Platform</strong> and <strong>Firebase<\/strong>. Over the years I have developed a deep understanding of computer science and have applied myself in both theoretical and practical applications.<\/p>\n\n<h4><\/h4>\n\n<h3>我酷爱生活 学习及科技<\/h3>\n\n<p><\/p>\n"
+            "info": "<p>我是一个居住于温尼伯热衷于科技的程序猿<\/p>\n\n<h4><\/h4>\n\n<p> 我喜欢使用 <strong>React<\/strong> 和 <strong>React Native<\/strong> 进行移动应用的开发，以管理 <strong>Rails<\/strong> 和 <strong>ExpressJS<\/strong> 后端的应用程序编程接口（API）的运行。我对使用软件栈（software stacks), 是指为了实现某种完整功能解决方案（例如某款产品或服务）所需的一套软件子系统或组件，有着丰富的经验。此外，我很喜欢使用 <strong>Google Cloud Platform<\/strong> 和 <strong>Firebase<\/strong> 等云端解决方案。随着时间的推移，我对软件开发产生了深深地酷爱，并将自己的经验运用到理论和实际应用中。 <\/p>\n\n<h4><\/h4>\n\n<h3>我酷爱生活 学习及科技<\/h3>\n\n<p><\/p>\n"
         },
         "discover": {
             "title": "热爱探索",
             "subtitle": "我相信研究和发现",
             "experience": "我工作过的地方",
-            "intro": "[zh] I don't just write code. I write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
-            "summary": "[zh] I don't wait for the future. I make it. Swipe left to learn more about where I have worked and what I do.",
+            "intro": "我不止于编写代码，我志在编写可访问代码。软件开发是我人生永不停息的旅程。因此，我主张使用整洁代码、敏捷开发、创新技术，生产出现代、快捷、可访问的产品。",
+            "summary": "我不坐等未来。我创造未来。向左滑动了解更多关于我的过往工作经历。",
             "jobs": {
                 "transit": {
                     "title": "温尼伯过境",
                     "position": "程序员分析师",
                     "visit": "访问温尼伯过境",
-                    "description": "Foo <strong>Bar</strong> Baz"
+                    "description": "世界上多数人出行依赖于公共交通系统。<br /><br />在“温尼伯运输”项目，我专注于向公众提供各种工具去获取交通调度信息。<br /><br />我在“面向公众的应用程序”小组内担任程序员/分析员。<br /><br />我对新兴技术特别有热情，因此在团队里很享受学习和测试新工具的过程。"
+                },
+                "dawei": {
+                    "title": "大卫信息解决方案",
+                    "position": "所有者,首席软件开发人员",
+                    "description": "为什么不从事你所热爱的工作呢？<br /><br />“大卫信息解决方案”让每个人拥有网络形象成为易事。<br/><br/>我创立“大卫信息解决方案”的初衷是提供便捷经济的方式，降低中小企业拥有网站和常规IT支持的进入门槛。<br/><br/>近期我已离开“大卫（音译）”，现为“温尼伯运输”项目全职工作人员。"
+                },
+                "enigma": {
+                    "title": "英格玛网络",
+                    "position": "首席软件开发人员",
+                    "description": "我热衷于与小企业共事。<br /><br />“英格玛网络”是位于温尼伯的一家小型IT商店，为小企业提供IT服务，例如定制基于web的软件应用。<br /><br />在这里，我开始使用PHP为各种项目开发和调配可用于生产的解决方案，包括线上商城及当地企业的预订和库存管理系统。<br /><br />这也让我开始钻研NodeJS和Angular的浩瀚世界。<br /><br />"
                 }
             }            
         },
@@ -42,16 +56,18 @@
             "title": "热爱交流",
             "subtitle": "所以您想取得联系。",
             "intro": "这是与我联系的最佳方法的简要指南",
-            "email": "通过电子邮件与我联系，如果：",
-            "social": "通过社交媒体与我联系，如果：",
-            "consult": "您要我与您协商一个项目",
-            "history": "您正在寻找更详细的职业经历或有其他业务问题",
-            "feedback": "您还有与此网站有关的任何其他反馈",
+            "email": "以下情况，您应该通过电子邮件与我联系：",
+            "social": "以下情况，您应该通过社交媒体与我联系：",
+            "consult": "您希望我与您协商项目",
+            "history": "您想要更详细的职业经历或有其他业务问题",
+            "feedback": "您还有与此网站相关的其他反馈意见",
             "send_an_email": "如果适合您的查询，请发送电子邮件至",
-            "say_hello": "你想打个招呼",
-            "know_more_about_me": "您想说了解更多关于我的信息",
-            "any_other_reason": "任何其他原因",
-            "find_me_as": "线上我叫"
+            "say_hello": "您想问候",
+            "know_more_about_me": "您想进一步了解我",
+            "any_other_reason": "其他原因",
+            "find_me_as": "线上我叫",
+            "feel_free_to_use": "随意使用我的",
+            "if_you_want": "密钥"
         },
         "photos": {
             "title": "a lover of art"

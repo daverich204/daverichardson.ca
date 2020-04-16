@@ -28,7 +28,7 @@ const StyledIcon = styled.div`
 `;
 
 function DrawerButton(props) {
-  const { onClick, title, icon, to } = props;
+  const { onClick, title, icon, to, disabled } = props;
 
   return (
     <NavLink
@@ -39,7 +39,7 @@ function DrawerButton(props) {
         state: { from: window.location.pathname },
       }}
     >
-      <StyledButton color="inherit" onClick={onClick}>
+      <StyledButton color="inherit" onClick={onClick} disabled={disabled}>
         <StyledIcon>{icon}</StyledIcon>
         <StyledTitle>
           <span className="font-weight-light">{title}</span>

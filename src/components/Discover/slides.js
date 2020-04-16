@@ -101,76 +101,75 @@ const slides = [
     ),
   }, 
   {
-    title: 'dawei solutions',
+    title: 'pages.discover.jobs.dawei.title',
     icon: Newspaper,
     // iconStyleName: 'cellphoneText',
-    subtitle: 'Owner, President, Lead Developer',
+    subtitle: 'pages.discover.jobs.dawei.position',
     view: (
-      <div className="cell grid-x">
-        <SlideDescription className="large-4 cell">
-          Why not do what you love?
-          <br />
-          <br />
-          <strong>Dawei Information Solutions</strong> makes having a web presence easy for everyone.
-          <br />
-          <br />
-          I started Dawei Information Solutions to help reduce the entry barrier for small to medium
-          sized businesses and provide an easy, cost effective way to have a websites and general IT support.
-          <br />
-          <br />
-          I've moved on from <strong>Dawei</strong> recently, and am now working full-time at <strong>Winnipeg Transit</strong>
-          <br />
-          <br />
-        </SlideDescription>
-        <DiscoverVideoContainer className="large-8 cell">
-          <DiscoverVideo controls loop autoPlay muted>
-            <source src={daweiLoopVideo} type="video/webm" />
-            <source src={daweiLoopVideoMP4} type="video/mp4" />
-          </DiscoverVideo>
-        </DiscoverVideoContainer>
-      </div>
+      <Translation>
+        {(t, { i18n }) => {
+          function createMarkup(localeKey) { return {__html: t(localeKey)}; };
+
+          return (
+            <div className="cell grid-x">
+              <SlideDescription className="large-4 cell">
+                <span
+                  className="medium-8 cell font-weight-light text-align-right indent"
+                  color="inherit"
+                  dangerouslySetInnerHTML={createMarkup('pages.discover.jobs.dawei.description')}
+                />
+              </SlideDescription>
+              <DiscoverVideoContainer className="large-8 cell">
+                <DiscoverVideo controls loop autoPlay muted>
+                  <source src={daweiLoopVideo} type="video/webm" />
+                  <source src={daweiLoopVideoMP4} type="video/mp4" />
+                </DiscoverVideo>
+              </DiscoverVideoContainer>
+            </div>
+          )
+        }}
+      </Translation>
     ),
   },
   {
-    title: 'enigma networks',
+    title: 'pages.discover.jobs.enigma.title',
     icon: CellphoneText,
     // iconStyleName: 'accountHeart',
-    subtitle: 'Lead Software Developer',
+    subtitle: 'pages.discover.jobs.enigma.position',
     view: (
-      <div className="cell grid-x">
-        <SlideDescription className="large-4 cell">
-          I love working with small businesses.
-          <br />
-          <br />
-          <strong>Enigma Networks</strong> was a small IT shop in Winnipeg
-          that provided small businesses with IT services such as custom web based 
-          software applications.
-          <br />
-          <br />
-          I started using PHP to develop and deploy production ready solutions
-          for a variety of projects from online stores, to reservation and inventory management systems for local businesses.
-          <br />
-          <br />
-          This is where I started to delve into the vast world of NodeJS and Angular.
-          <br />
-          <br />
-         
-          <Button
-            color="primary"
-            variant="contained"
-            href="https://enigmanetworks.ca"
-            target="_blank"
-          >
-            More Info
-          </Button>
-        </SlideDescription>
-        <DiscoverVideoContainer className="large-8 cell">
-          <DiscoverVideo controls loop autoPlay muted>
-            <source src={enigmaLoopVideo} type="video/webm" />
-            <source src={enigmaLoopVideoMP4} type="video/mp4" />
-          </DiscoverVideo>
-        </DiscoverVideoContainer>
-      </div>
+      <Translation>
+        {(t, { i18n }) => {
+          function createMarkup(localeKey) { return {__html: t(localeKey)}; };
+
+          return  (
+            <div className="cell grid-x">
+              <SlideDescription className="large-4 cell">
+                <span
+                  className="medium-8 cell font-weight-light text-align-right indent"
+                  color="inherit"
+                  dangerouslySetInnerHTML={createMarkup('pages.discover.jobs.enigma.description')}
+                />
+                <br />
+                <br />
+                <Button
+                  color="primary"
+                  variant="contained"
+                  href="https://enigmanetworks.ca"
+                  target="_blank"
+                >
+                  More Info
+                </Button>
+              </SlideDescription>
+              <DiscoverVideoContainer className="large-8 cell">
+                <DiscoverVideo controls loop autoPlay muted>
+                  <source src={enigmaLoopVideo} type="video/webm" />
+                  <source src={enigmaLoopVideoMP4} type="video/mp4" />
+                </DiscoverVideo>
+              </DiscoverVideoContainer>
+            </div>
+          )
+        }}
+      </Translation>
     ),
   },
   // {

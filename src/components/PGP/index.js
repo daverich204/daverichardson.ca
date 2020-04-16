@@ -62,7 +62,7 @@ export default function PGP() {
         <h1>
           <div className="grid-x">
             <TypingText className="medium-6 auto cell flex">
-              {t('So you wanna talk securely?')}
+              {t('pages.pgp.title')}
             </TypingText>
             <div className="shrink cell">
               <Lock className="titleIcon" style={styles.forum} />
@@ -74,7 +74,7 @@ export default function PGP() {
         <div className="auto cell" />
         <span className="text-align-right medium-10 cell grid-x">
           <div className="cell">
-            {t('Feel free to use my PGP key...')}
+            {t('pages.pgp.subtitle')}
           </div>
           <br />
           <ContactOptionContainer className="large-5 large-offset-7 cell">

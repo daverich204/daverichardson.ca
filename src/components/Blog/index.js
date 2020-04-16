@@ -47,7 +47,7 @@ export default function Blog(props) {
         <h1>
           <div className="grid-x">
             <TypingText className="medium-6 auto cell">
-              {t('pages.blog.title')}
+              {`${t('pages.blog.title')} ${t('pages.blog.coming soon')}`}
             </TypingText>
             <div className="shrink cell">
               <BookOpenPageVariant
@@ -62,8 +62,7 @@ export default function Blog(props) {
         <div className="flex" />        
         <BlogWrapper>
           <div>
-            <h2>{t('pages.blog.coming soon')}</h2>
-            <h1>                
+            <h1>
               <Skeleton count={3} />
             </h1>
           </div>  
