@@ -37,7 +37,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 
-import { ChevronLeft, Close } from 'mdi-material-ui';
+import {ChevronLeft, Close, GithubCircle} from 'mdi-material-ui';
 
 import Layout from '../../components/Layout';
 import IndeterminateProgressMotion from '../../components/IndeterminateProgressMotion';
@@ -144,6 +144,12 @@ class Structure extends React.Component {
           <DrawerButton title={t("navigation.blog")} to="/blog" onClick={openMenu} />
           <DrawerButton title={t("navigation.contact")} to="/contact" onClick={openMenu} />
           <Divider />
+          <div style={{flexGrow: '1'}} />
+          <DrawerButton
+            title={t('navigation.github')}
+            to={'#'}
+            onClick={() => window.open("https://github.com/daverich204", "_blank")}
+          />
 
         </SwipeableDrawer>
         <Layout

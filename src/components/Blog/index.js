@@ -47,7 +47,7 @@ export default function Blog(props) {
         <h1>
           <div className="grid-x">
             <TypingText className="medium-6 auto cell">
-              {`${t('pages.blog.title')} ${t('pages.blog.coming soon')}`}
+              {`${t('pages.blog.title')}`}
             </TypingText>
             <div className="shrink cell">
               <BookOpenPageVariant

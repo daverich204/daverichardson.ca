@@ -23,7 +23,7 @@ const StyledTitle = styled.div`
 
 const StyledIcon = styled.div`
   position: absolute;
-  right: 1.5rem;
+  right: 1rem;  
   font-size: 2.5rem !important;
 `;
 

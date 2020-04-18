@@ -6,7 +6,11 @@ import { shadow } from '../../static/Accents';
 import { large, medium, small } from '../../static/Dimens';
 
 const BackgroundAvatarContainer = styled.div`
-  background-image: ${props => `url(${props.src})`};
+  background-image: ${props => `linear-gradient( to left top, 
+    rgba(4, 4, 36, 0.55),
+    rgba(27, 32, 51, 0.45)
+    ),
+    url(${props.src})`};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -31,11 +35,6 @@ const BackgroundAvatarContainer = styled.div`
   }
 
   @media (max-width: ${medium}) {
-    background-image: ${props => `linear-gradient( to left top, 
-    rgba(208, 0, 53, 0.55),
-    rgba(28, 34, 71, 0.45)
-    ),
-    url(${props.src})`};
     left: calc(50% - 50vw);
     width: 100vw;
     height: 100vw;

@@ -11,6 +11,7 @@
         "blog": "Blog",
         "photos": "Photos",
         "contact": "Contact",
+        "github": "My open source work",
         "previous": "Back",
         "next": "Next"
     },   
@@ -37,7 +38,7 @@
                     "description": "Many people in the world rely on public transit.<br /><br />At <strong>Winnipeg Transit<\/strong>, my focus is on making schedule information accessible through a variety of tools available to the public.<br /><br />I function as a programmer / analyst on the <strong>Public Facing Apps</strong> team.  I have a strong passion for emerging technologies, so I enjoy learning and testing new tools with my team."
                 },
                 "dawei": {
-                    "title": "dawei information solutions",
+                    "title": "dawei info. solutions",
                     "position": "Owner, Lead Developer",
                     "description": "Why not do what you love?<br /><br /><strong>Dawei Information Solutions</strong> made having a web presence easy for everyone.<br /><br />I started <strong>Dawei Information Solutions</strong> to help reduce the entry barrier for small to medium sized businesses and provide an easy, cost effective way to have websites and general IT support.<br /><br />I've moved on from <strong>Dawei</strong> recently, and am now working full-time at <strong>Winnipeg Transit</strong>"
                 },

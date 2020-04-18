@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useTranslation } from 'react-i18next';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Textfit } from 'react-textfit';
 
 import {
   Typography,
@@ -96,7 +97,7 @@ function Layout({ children, openNotif, openMenu, menuItemsList }) {
             <Link to="/">
               <span className="show-for-large">
                 <HeaderLogo src={logo} alt="dave richardson" />
-              </span>              
+              </span>
               <span className="show-for-medium">
                 {t('name')}
               </span>
@@ -106,13 +107,14 @@ function Layout({ children, openNotif, openMenu, menuItemsList }) {
               </span>
               <span className="show-for-small hide-for-medium">
                 {t('firstname')}
-                {i18n.language == "en" && <br />}
+                {i18n.language == "en" && (<>&nbsp;</>)}
                 {t('lastname')}
               </span>
             </Link>
           </Typography>
           {menuItemsList}
-          <Tooltip title="My open source work">
+
+          <Tooltip title="My open source work" className={"show-for-medium"}>
             <IconButton
               color="inherit"
               href="https://github.com/daverich204"
@@ -121,28 +123,32 @@ function Layout({ children, openNotif, openMenu, menuItemsList }) {
               <GithubCircle />
             </IconButton>
           </Tooltip>
-          <IconButton
-            color="inherit"
-            onClick={() => openNotif('contact', t('notifications.contact'))}
-          >
-            <Badge
-              badgeContent={<h2 className="font-weight-normal">!</h2>}
-              color="error"
+          <Tooltip title="Notifications">
+            <IconButton
+              color="inherit"
+              onClick={() => openNotif('contact', t('notifications.contact'))}
             >
-              <Bell />
-            </Badge>
-          </IconButton>
-          <IconButton
-            color="inherit"
-            onClick={() => toggleLanguage()}
-          > 
-            <Badge
-              badgeContent={i18n.language === 'zh' ? '中' : i18n.language}
-              color="primary"
+              <Badge
+                badgeContent={<h2 className="font-weight-normal">!</h2>}
+                color="error"
+              >
+                <Bell />
+              </Badge>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Change language">
+            <IconButton
+              color="inherit"
+              onClick={() => toggleLanguage()}
             >
-              <GoogleTranslate />
-            </Badge>
-          </IconButton>
+              <Badge
+                badgeContent={i18n.language === 'zh' ? '中' : i18n.language}
+                color="primary"
+              >
+                <GoogleTranslate />
+              </Badge>
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
       <CardContainer>
