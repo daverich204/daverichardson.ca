@@ -36,7 +36,7 @@ const BlogWrapper = styled.span`
   }
 
   @media (min-width: ${medium}) {
-    min-width: 36rem;
+    min-width: 50rem;
   }
 `;
 

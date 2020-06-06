@@ -7,6 +7,7 @@ import Blog from '../components/Blog/Loadable';
 import Contact from '../components/Contact/Loadable';
 import Discover from '../components/Discover/Loadable';
 import PGP  from '../components/PGP/Loadable';
+import YouTube from '../components/YouTube/Loadable';
 // import Photos from '../components/Photos/Loadable';
 
 import NotFoundPage from '../containers/NotFoundPage/Loadable';
@@ -35,19 +36,16 @@ export default function App() {
   const { hash } = window.location;
   return (
     <Switch>
-      {!!hash && (
-        <Redirect
-          to={`${normalizePath(hash).substring(hash.indexOf('#') + 1)}`}
-        />
-      )}
+      {!!hash && (<Redirect  to={`${normalizePath(hash).substring(hash.indexOf('#') + 1)}`} />)}
       <StructuredRoute exact path="/" component={About} />
       <StructuredRoute path="/discover/:index?" component={Discover} /> 
       <StructuredRoute path="/contact" component={Contact} />
       <StructuredRoute path="/pgp" component={PGP} />
       <StructuredRoute path="/blog" component={Blog} />
+      <StructuredRoute path={'/youtube'} component={YouTube} />
       {/* <StructuredRoute path="/photos" component={Photos} /> */}
       <Redirect from="*" to="/" />
-      <Route component={NotFoundPage} />
+      {/*<Route component={NotFoundPage} />*/}
     </Switch>
   );
 }

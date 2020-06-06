@@ -51,7 +51,8 @@
         },
         "blog": {
             "title": "热爱分享",
-            "coming soon": "即将来临..."
+            "coming soon": "即将来临...",
+            "link_text":  "读"
         },
         "contact": {
             "title": "热爱交流",

@@ -3,13 +3,9 @@
  * Blog
  *
  */
-
-import React, { useState } from 'react';
-import Rebloggr from 'rebloggr';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-// import Rebloggr from 'components/Rebloggr';
-import ConsoleLine from 'mdi-material-ui/ConsoleLine';
 import BookOpenPageVariant from 'mdi-material-ui/BookOpenPageVariant';
 import Typist from 'react-typist';
 import Skeleton from 'react-loading-skeleton';
@@ -17,28 +13,55 @@ import Skeleton from 'react-loading-skeleton';
 import BackgroundAvatar from '../BackgroundAvatar';
 
 import BlogWrapper from './BlogWrapper';
+import BlogPost from './BlogPost';
 
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import { rollbar } from '../../config/rollbar.js';
 
 const styles = {
   bookOpenPageVariant: {
     marginBottom: '0.5rem',
   },
+  blogPost: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexGrow: 1,
+  },
+  blogPostLink: {
+    flexGrow: 1
+  }
 };
 
 /* eslint-disable react/prefer-stateless-function */
 export default function Blog(props) {
-  const { t, i18n } = useTranslation('translation');
+  const { t } = useTranslation('translation');
 
-  const [state, setState] = useState({});
+  const [blogPosts, setBlogPosts] = useState([]);
 
-  const TypingText = ({children, ...other}) => (
-    <Typist {...other}>
-      {children}
-    </Typist>
-  )
-  
+useEffect(() => {
+  fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
+    .then((resp) => {
+      if (resp && resp.ok && resp.status === 200) {
+        return resp.json();
+      } else {
+        throw(resp);
+      }
+    })
+    .then((posts) => setBlogPosts(posts))
+    .catch((exception) => rollbar.error('Blog/index.js: Fetch Posts Exception', exception));
+}, [])
+
+  const blogTitle = t('pages.blog.title');
+
+
+
+  const TypingText = React.useMemo(() => {
+    return ({children, ...other}) => (
+      <Typist {...other}>
+        {children}
+      </Typist>
+    )
+  }, [blogTitle]);
+
   return (
     <div>
       <BackgroundAvatar />
@@ -47,7 +70,7 @@ export default function Blog(props) {
         <h1>
           <div className="grid-x">
             <TypingText className="medium-6 auto cell">
-              {`${t('pages.blog.title')}`}
+              {`${blogTitle}`}
             </TypingText>
             <div className="shrink cell">
               <BookOpenPageVariant
@@ -62,10 +85,16 @@ export default function Blog(props) {
         <div className="flex" />        
         <BlogWrapper>
           <div>
-            <h1>
-              <Skeleton count={3} />
-            </h1>
-          </div>  
+            { blogPosts ? (
+              (blogPosts || []).map((blogPost, index) => (<BlogPost post={blogPost} key={index} />))
+            ) : (
+              <div>
+                <h1>
+                  <Skeleton count={3} />
+                </h1>
+              </div>
+            )}
+          </div>
         </BlogWrapper>
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 
-// import daverich204Avatar from 'images/profile1_transparent.png';
-// import daverich204Avatar from '../../images/avatar.png';
 import daverich204Avatar_blue from '../../images/avatar_blue.png';
+// import deers from '../../images/cats.jpg';
 
 import BackgroundAvatarContainer from './BackgroundAvatarContainer';
 

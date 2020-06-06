@@ -17,7 +17,7 @@
     },   
     "pages": {
         "pgp":{
-            "title": "so you wanna talk securely?",
+            "title": "wanna talk securely?",
             "subtitle": "Feel free to use my PGP key when emailing me..."
         },
         "about": {
@@ -51,7 +51,8 @@
         },
         "blog": {
             "title": "a lover of sharing",
-            "coming soon": "coming soon..."
+            "coming soon": "coming soon...",
+            "link_text":  "read"
         },
         "contact": {
             "title": "a lover of communication",

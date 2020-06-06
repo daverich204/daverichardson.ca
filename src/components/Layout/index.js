@@ -16,7 +16,6 @@ import { Bell, Menu, GithubCircle, Copyright, GoogleTranslate } from 'mdi-materi
 
 import { SkeletonTheme } from 'react-loading-skeleton';
 
-// import logo from '../../images/daverichardson_logo.png';
 import logo from '../../images/daverichardson_logo_small.png';
 
 import {
@@ -58,14 +57,6 @@ const year = new Date().getFullYear();
 function Layout({ children, openNotif, openMenu, menuItemsList }) {
   const { t, i18n } = useTranslation('translation');
 
-  const [PGPKey, setPGPKey] = useState(true);
-
-  useEffect(() => {
-    fetch('/pgp_key.txt')
-        .then((r)  => r.text())
-        .then((pgp_key) => setPGPKey(pgp_key))
-  }, [])
-
   const toggleLanguage = () => {
     const currentURL = window.location.href;
 
@@ -99,16 +90,16 @@ function Layout({ children, openNotif, openMenu, menuItemsList }) {
                 <HeaderLogo src={logo} alt="dave richardson" />
               </span>
               <span className="show-for-medium">
-                {t('name')}
+                {t('firstname')}
+                {i18n.language == "en" && (<>&nbsp;</>)}
+                {t('lastname')}
               </span>
               <span className="show-for-medium font-weight-very-light">
                  {' | '}
                  {t('title')}
               </span>
               <span className="show-for-small hide-for-medium">
-                {t('firstname')}
-                {i18n.language == "en" && (<>&nbsp;</>)}
-                {t('lastname')}
+                {t('name')}
               </span>
             </Link>
           </Typography>
