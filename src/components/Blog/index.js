@@ -16,6 +16,8 @@ import BlogWrapper from './BlogWrapper';
 import BlogPost from './BlogPost';
 
 import { rollbar } from '../../config/rollbar.js';
+import {Link} from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 const styles = {
   bookOpenPageVariant: {
@@ -37,22 +39,23 @@ export default function Blog(props) {
 
   const [blogPosts, setBlogPosts] = useState([]);
 
-useEffect(() => {
-  fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
-    .then((resp) => {
-      if (resp && resp.ok && resp.status === 200) {
-        return resp.json();
-      } else {
-        throw(resp);
-      }
-    })
-    .then((posts) => setBlogPosts(posts))
-    .catch((exception) => rollbar.error('Blog/index.js: Fetch Posts Exception', exception));
-}, [])
+  useEffect(() => {
+    setTimeout(() => {
+      fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
+        .then((resp) => {
+          if (resp && resp.ok && resp.status === 200) {
+            return resp.json();
+          } else {
+            throw(resp);
+          }
+        })
+        .then((posts) => setBlogPosts(posts))
+        .catch((exception) => rollbar.error('Blog/index.js: Fetch Posts Exception', exception));
+    }, 250);
+
+  }, [blogPosts])
 
   const blogTitle = t('pages.blog.title');
-
-
 
   const TypingText = React.useMemo(() => {
     return ({children, ...other}) => (
@@ -85,7 +88,7 @@ useEffect(() => {
         <div className="flex" />        
         <BlogWrapper>
           <div>
-            { blogPosts ? (
+            { (blogPosts && blogPosts.length) ? (
               (blogPosts || []).map((blogPost, index) => (<BlogPost post={blogPost} key={index} />))
             ) : (
               <div>
@@ -96,6 +99,14 @@ useEffect(() => {
             )}
           </div>
         </BlogWrapper>
+      </div>
+      <div className="grid-x">
+        <div className="auto cell" />
+        <a href={'https://blog.daverichardson.ca'} target={'_blank'}>
+          <Button variant="contained" color="secondary">
+            {t('pages.blog.link_text')}!
+          </Button>
+        </a>
       </div>
     </div>
   );
