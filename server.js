@@ -8,7 +8,7 @@ const app = express();
 
 const DEFAULT_TITLE = 'Dave Richardson | Full Stack Developer';
 const DEFAULT_DESCRIPTION = 'Hey there, I am a full stack software developer living in Winnipeg, Canada';
-const DEFAULT_IMAGE = 'https://daverichardson.ca/images/about_en.zh';
+const DEFAULT_IMAGE = 'https://daverichardson.ca/images/about_en.png';
 
 const t = {
   en: {
