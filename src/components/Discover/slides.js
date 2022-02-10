@@ -8,6 +8,7 @@ import CellphoneText from 'mdi-material-ui/CellphoneText';
 import Newspaper from 'mdi-material-ui/Newspaper';
 import AccountHeart from 'mdi-material-ui/AccountHeart';
 import BusIcon from 'mdi-material-ui/Bus';
+import BookIcon from 'mdi-material-ui/Book';
 import BarleyIcon from 'mdi-material-ui/Barley';
 import AirplaneIcon from 'mdi-material-ui/AirplaneTakeoff';
 
@@ -21,13 +22,8 @@ import daweiLoopVideo from '../../videos/dawei-loop.webm';
 import daweiLoopVideoMP4 from '../../videos/dawei-loop.mp4';
 import enigmaLoopVideo from '../../videos/enigma-loop.webm';
 import enigmaLoopVideoMP4 from '../../videos/enigma-loop.mp4';
-
-import devoteamDiscoveryLoopVideo from '../../videos/devoteam-discovery-loop.webm';
-import dimkastDiscoveryLoopVideo from '../../videos/dimkast-discovery-loop.webm';
-import uxpeakDiscoveryLoopVideo from '../../videos/uxpeak-discovery-loop.webm';
-import devoteamDiscoveryLoopVideoMp4 from '../../videos/devoteam-discovery-loop.mp4';
-import dimkastDiscoveryLoopVideoMp4 from '../../videos/dimkast-discovery-loop.mp4';
-import uxpeakDiscoveryLoopVideoMp4 from '../../videos/uxpeak-discovery-loop.mp4';
+import legibleLoopVideo from '../../videos/legible-loop.webm';
+import legibleLoopVideoMP4 from '../../videos/legible-loop.mp4';
 
 const slides = [
   {
@@ -58,6 +54,46 @@ const slides = [
           </span>
         )}
       </Translation>      
+    ),
+  },
+  {
+    title: 'pages.discover.jobs.legible.title',
+    icon: BookIcon,
+    // iconStyleName: 'accountHeart',
+    subtitle: 'pages.discover.jobs.legible.position',
+    view: (
+        <Translation>
+          {(t, { i18n }) => {
+            function createMarkup(localeKey) { return {__html: t(localeKey)}; };
+
+            return (
+                <div className="cell grid-x">
+                  <SlideDescription className="large-4 cell">
+              <span
+                  className="medium-8 cell font-weight-light text-align-right indent"
+                  color="inherit"
+                  dangerouslySetInnerHTML={createMarkup('pages.discover.jobs.legible.description')}
+              />
+                    <br />
+                    <br />
+                    <Button
+                        color="secondary"
+                        variant="contained"
+                        href="https://legible.com"
+                        target="_blank"
+                    >
+                      {t('pages.discover.jobs.legible.visit')}
+                    </Button>
+                  </SlideDescription>
+                  <DiscoverVideoContainer className="large-8 cell">
+                    <DiscoverVideo controls loop autoPlay muted>
+                      <source src={legibleLoopVideo} type="video/webm" />
+                      <source src={legibleLoopVideoMP4} type="video/mp4" />
+                    </DiscoverVideo>
+                  </DiscoverVideoContainer>
+                </div>
+            )}}
+        </Translation>
     ),
   },
   {
@@ -205,8 +241,8 @@ const slides = [
   //       </SlideDescription>
   //       <DiscoverVideoContainer className="large-8 cell">
   //         <DiscoverVideo controls loop autoPlay muted>
-  //           <source src={devoteamDiscoveryLoopVideo} type="video/webm" />
-  //           <source src={devoteamDiscoveryLoopVideoMp4} type="video/mp4" />
+  //           <source src={enigmaLoopVideo} type="video/webm" />
+  //           <source src={enigmaLoopVideoMP4} type="video/mp4" />
   //         </DiscoverVideo>
   //       </DiscoverVideoContainer>
   //     </div>
@@ -242,8 +278,8 @@ const slides = [
   //       </SlideDescription>
   //       <DiscoverVideoContainer className="large-8 cell">
   //         <DiscoverVideo controls loop autoPlay muted>
-  //           <source src={devoteamDiscoveryLoopVideo} type="video/webm" />
-  //           <source src={devoteamDiscoveryLoopVideoMp4} type="video/mp4" />
+  //           <source src={enigmaLoopVideo} type="video/webm" />
+  //           <source src={enigmaLoopVideoMP4} type="video/mp4" />
   //         </DiscoverVideo>
   //       </DiscoverVideoContainer>
   //     </div>
@@ -282,8 +318,8 @@ const slides = [
   //       </SlideDescription>
   //       <DiscoverVideoContainer className="large-8 cell">
   //         <DiscoverVideo controls loop autoPlay muted>
-  //           <source src={devoteamDiscoveryLoopVideo} type="video/webm" />
-  //           <source src={devoteamDiscoveryLoopVideoMp4} type="video/mp4" />
+  //           <source src={enigmaLoopVideo} type="video/webm" />
+  //           <source src={enigmaLoopVideoMP4} type="video/mp4" />
   //         </DiscoverVideo>
   //       </DiscoverVideoContainer>
   //     </div>

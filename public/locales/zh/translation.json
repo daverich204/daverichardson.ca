@@ -31,6 +31,12 @@
             "intro": "我不止于编写代码，我志在编写可访问代码。软件开发是我人生永不停息的旅程。因此，我主张使用整洁代码、敏捷开发、创新技术，生产出现代、快捷、可访问的产品。",
             "summary": "我不坐等未来。我创造未来。向左滑动了解更多关于我的过往工作经历。",
             "jobs": {
+                "legible": {
+                    "title": "legible media inc.",
+                    "position": "Senior Software Developer",
+                    "visit": "Visit Legible",
+                    "description": "Legible description...."
+                },
                 "transit": {
                     "title": "温尼伯过境",
                     "position": "程序员分析师",

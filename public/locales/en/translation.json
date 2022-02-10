@@ -31,6 +31,12 @@
             "intro": "I don't just write code, I aim to write accessible code. Software development is my never ending journey. Therefore, I advocate for clean code, agile development, and innovative technologies to provide a modern, fast, and accessible product.",
             "summary": "I don't wait for the future. I make it. Swipe left to learn more about where I have worked and what I do.",
             "jobs": {
+                "legible": {
+                    "title": "legible media inc.",
+                    "position": "Senior Software Developer",
+                    "visit": "Visit Legible",
+                    "description": "Legible description...."
+                },
                 "transit": {
                     "title": "winnipeg transit",
                     "position": "Programmer Analyst II",

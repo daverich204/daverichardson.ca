@@ -9,6 +9,7 @@ const DiscoverVideo = styled.video`
     css`
       background-image: url(${props.src});
     `};
+  margin-top: -2rem;
   background-color: ${backgroundColorDark};
   position: absolute;
   width: 100%;
@@ -19,8 +20,7 @@ const DiscoverVideo = styled.video`
   border: 1rem solid ${backgroundColorDark};
   border-radius: 0.25rem;
 
-  @media (min-width: ${large}) {
-    // height: calc(890 / 1440 * 100%);
+  @media (min-width: ${large}) {     
     height: calc(890 / 1600 * 100%);
   }
 `;
