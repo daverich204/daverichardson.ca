@@ -12,7 +12,7 @@ import {
   Badge,
   Tooltip,
 } from '@material-ui/core';
-import { Bell, Menu, GithubCircle, Copyright, GoogleTranslate } from 'mdi-material-ui';
+import { Bell, Menu, Github as GithubCircle, Copyright, GoogleTranslate } from 'mdi-material-ui';
 
 import { SkeletonTheme } from 'react-loading-skeleton';
 
@@ -58,8 +58,6 @@ function Layout({ children, openNotif, openMenu, menuItemsList }) {
   const { t, i18n } = useTranslation('translation');
 
   const toggleLanguage = () => {
-    const currentURL = window.location.href;
-
     const nextLanguage = (i18n.language !== "zh" ? "zh" : "en");
     i18n.changeLanguage(nextLanguage);
   }
