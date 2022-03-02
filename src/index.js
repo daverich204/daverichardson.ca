@@ -16,8 +16,7 @@ import { I18nextProvider } from 'react-i18next';
 
 import createHistory from 'history/createBrowserHistory';
 
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { createMuiTheme, ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
 import CustomTheme from './static/Theme';
 

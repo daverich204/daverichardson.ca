@@ -1,5 +1,5 @@
 import React from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 
 import {
   primaryColor,
@@ -22,7 +22,7 @@ import {
   backgroundContrastLightGradient,
 } from './Colors';
 
-const MyCustomTheme = createMuiTheme({
+const MyCustomTheme = createTheme({
   typography: {
     useNextVariants: true,
     fontFamily: '"Inconsolata", "Roboto", sans-serif',
