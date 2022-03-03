@@ -40,7 +40,7 @@ export default function Blog(props) {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const fetchTimeout = setTimeout(() => {
       fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
         .then((resp) => {
           if (resp && resp.ok && resp.status === 200) {
@@ -53,6 +53,7 @@ export default function Blog(props) {
         .catch((exception) => rollbar.error('Blog/index.js: Fetch Posts Exception', exception));
     }, 250);
 
+    return () => clearTimeout(fetchTimeout);
   }, [blogPosts])
 
   const blogTitle = t('pages.blog.title');

@@ -45,7 +45,7 @@ export default class Rebloggr extends React.Component {
       cta,
       linkTarget = '_blank',
       loadingComponent,
-      ...rest,
+      ...rest
     } = this.props;
     const { postList } = this.state;
     return (
