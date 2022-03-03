@@ -9,7 +9,7 @@ export default class Rebloggr extends React.Component {
   }
   componentWillMount() {
     const { blogUrl } = this.props;
-    
+
     const { postList } = this.state;
     if (postList.length === 0) {
       this.generatePostList();
