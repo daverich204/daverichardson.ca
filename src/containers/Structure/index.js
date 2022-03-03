@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -57,136 +57,134 @@ const styles = {
   },
 };
 
-class Structure extends React.Component {
-  componentWillMount() {
-    const { getProfileData } = this.props;
+const Structure = (props) => {
+  const {
+    getProfileData = () => {},
+    children,
+    openNotif,
+    isNotifOpen,
+    notifType,
+    notifMessage,
+    openDialog,
+    isDialogOpen,
+    dialogTitle,
+    dialogMessage,
+    openMenu,
+    isMenuOpen,
+    t, i18n,
+    ...rest
+  } = props;
+
+  useEffect(() => {
     getProfileData();
-  }
+  }, []);
 
-  render() {
-    const {
-      children,
-      openNotif,
-      isNotifOpen,
-      notifType,
-      notifMessage,
-      openDialog,
-      isDialogOpen,
-      dialogTitle,
-      dialogMessage,
-      openMenu,
-      isMenuOpen,
-      t, i18n,
-      ...rest
-    } = this.props;
-
-    return (
-      <div>
-        <IndeterminateProgressMotion
-          active={rest.isIndeterminateLoadingMotionActive}
-        />
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          open={isNotifOpen}
-          autoHideDuration={isNotifOpen ? 8000 : undefined}
-          onClose={() => openNotif()}
-          snackbarcontentprops={{
-            'aria-describedby': 'notif-main',
-          }}
-          message={<span id="notif-main">{notifMessage}</span>}
-          action={[
-            notifType ? (
-              <Link
-                key={notifType}
-                to={{
-                  pathname: `/${notifType}`,
-                  state: { from: window.location.pathname },
-                }}
-              >
-                <Button color="inherit" onClick={() => openNotif()}>
-                  {t(`notifications.${notifType}_button`)}
-                </Button>
-              </Link>
-            ) : (
-              notifType
-            ),
-            <IconButton
-              key="close"
-              aria-label="Close"
-              color="inherit"
-              onClick={() => openNotif()}
+  return (
+    <div>
+      <IndeterminateProgressMotion
+        active={rest.isIndeterminateLoadingMotionActive}
+      />
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        open={isNotifOpen}
+        autoHideDuration={isNotifOpen ? 8000 : undefined}
+        onClose={() => openNotif()}
+        snackbarcontentprops={{
+          'aria-describedby': 'notif-main',
+        }}
+        message={<span id="notif-main">{notifMessage}</span>}
+        action={[
+          notifType ? (
+            <Link
+              key={notifType}
+              to={{
+                pathname: `/${notifType}`,
+                state: { from: window.location.pathname },
+              }}
             >
-              <Close />
-            </IconButton>,
-          ]}
+              <Button color="inherit" onClick={() => openNotif()}>
+                {t(`notifications.${notifType}_button`)}
+              </Button>
+            </Link>
+          ) : (
+            notifType
+          ),
+          <IconButton
+            key="close"
+            aria-label="Close"
+            color="inherit"
+            onClick={() => openNotif()}
+          >
+            <Close />
+          </IconButton>,
+        ]}
+      />
+      <SwipeableDrawer
+        className="hide-for-large"
+        open={isMenuOpen}
+        onClose={openMenu}
+        onOpen={openMenu}
+      >
+        <DrawerButton
+          title={''}
+          icon={<ChevronLeft style={styles.drawerChevronLeft} />}
+          onClick={openMenu}
+          to="#"
         />
-        <SwipeableDrawer
-          className="hide-for-large"
-          open={isMenuOpen}
-          onClose={openMenu}
-          onOpen={openMenu}
-        >
-          <DrawerButton
-            title={''}
-            icon={<ChevronLeft style={styles.drawerChevronLeft} />}
-            onClick={openMenu}
-            to="#"
-          />
-          <Divider />
+        <Divider />
 
-          <DrawerCard />
+        <DrawerCard />
 
-          <DrawerButton title={t("navigation.about")} onClick={openMenu} />
-          <DrawerButton title={t("navigation.discover")} to="/discover" onClick={openMenu} />
-          <DrawerButton title={t("navigation.blog")} to="/blog" onClick={openMenu} />
-          <DrawerButton title={t("navigation.contact")} to="/contact" onClick={openMenu} />
-          <Divider />
-          <div style={{flexGrow: '1'}} />
-          <DrawerButton
-            title={t('navigation.github')}
-            to={'#'}
-            onClick={() => window.open("https://github.com/daverich204", "_blank")}
-          />
+        <DrawerButton title={t("navigation.about")} onClick={openMenu} />
+        <DrawerButton title={t("navigation.discover")} to="/discover" onClick={openMenu} />
+        <DrawerButton title={t("navigation.blog")} to="/blog" onClick={openMenu} />
+        <DrawerButton title={t("navigation.contact")} to="/contact" onClick={openMenu} />
+        <Divider />
+        <div style={{flexGrow: '1'}} />
+        <DrawerButton
+          title={t('navigation.github')}
+          to={'#'}
+          onClick={() => window.open("https://github.com/daverich204", "_blank")}
+        />
 
-        </SwipeableDrawer>
-        <Layout
-          openNotif={openNotif}
-          openDialog={openDialog}
-          openMenu={openMenu}
-          menuItemsList={[
-            <AppBarButton
-              className="show-for-large"
-              key="about"
-              title={t("navigation.about")}
-            />,
-            <AppBarButton
-              className="show-for-large"
-              key="discover"
-              title={t('navigation.discover')}
-              to="/discover"
-            />,
-            <AppBarButton
-              className="show-for-large"
-              key="blog"
-              title={t('navigation.blog')}
-              to="/blog"
-            />,
-            <AppBarButton
-              className="show-for-large"
-              key="contact"
-              title={t('navigation.contact')}
-              to="/contact"
-            />,
-          ]}
-        >
-          {React.cloneElement(children, { ...rest })}
-        </Layout>
-      </div>
-    );
-  }
+      </SwipeableDrawer>
+      <Layout
+        openNotif={openNotif}
+        openDialog={openDialog}
+        openMenu={openMenu}
+        menuItemsList={[
+          <AppBarButton
+            className="show-for-large"
+            key="about"
+            title={t("navigation.about")}
+          />,
+          <AppBarButton
+            className="show-for-large"
+            key="discover"
+            title={t('navigation.discover')}
+            to="/discover"
+          />,
+          <AppBarButton
+            className="show-for-large"
+            key="blog"
+            title={t('navigation.blog')}
+            to="/blog"
+          />,
+          <AppBarButton
+            className="show-for-large"
+            key="contact"
+            title={t('navigation.contact')}
+            to="/contact"
+          />,
+        ]}
+      >
+        {React.cloneElement(children, { ...rest })}
+      </Layout>
+    </div>
+  );
 }
 
 Structure.propTypes = {
