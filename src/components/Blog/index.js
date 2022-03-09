@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next';
 import BookOpenPageVariant from 'mdi-material-ui/BookOpenPageVariant';
 import Typist from 'react-typist';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css'
 
 import BackgroundAvatar from '../BackgroundAvatar';
 

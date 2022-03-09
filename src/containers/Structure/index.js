@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { withTranslation } from 'react-i18next';
-
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import injectSaga from '../../utils/injectSaga';
 import injectReducer from '../../utils/injectReducer';
