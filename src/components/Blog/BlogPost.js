@@ -1,19 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 
 import Typography from '@material-ui/core/Typography';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 import moment from 'moment';
 
 import { accentColorDark, backgroundColorDark, backgroundContrastLight } from "../../static/Colors";
-import TypingText from "../Layout/TypingText";
 import {useTranslation} from "react-i18next";
 
 
