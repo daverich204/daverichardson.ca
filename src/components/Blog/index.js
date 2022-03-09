@@ -8,7 +8,8 @@ import { useTranslation } from 'react-i18next';
 
 import BookOpenPageVariant from 'mdi-material-ui/BookOpenPageVariant';
 import Typist from 'react-typist';
-import Skeleton from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import BackgroundAvatar from '../BackgroundAvatar';
 
@@ -16,7 +17,6 @@ import BlogWrapper from './BlogWrapper';
 import BlogPost from './BlogPost';
 
 import { rollbar } from '../../config/rollbar.js';
-import {Link} from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 const styles = {
@@ -92,11 +92,11 @@ export default function Blog(props) {
             { (blogPosts && blogPosts.length) ? (
               (blogPosts || []).map((blogPost, index) => (<BlogPost post={blogPost} key={index} />))
             ) : (
-              <div>
+              <SkeletonTheme baseColor="#1B2033F0" highlightColor="#01011C">
                 <h1>
-                  <Skeleton count={3} />
+                    <Skeleton count={3} height={153} />
                 </h1>
-              </div>
+              </SkeletonTheme>
             )}
           </div>
         </BlogWrapper>
