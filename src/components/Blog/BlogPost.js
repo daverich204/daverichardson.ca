@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 import moment from 'moment';
 
-import { accentColorDark, backgroundColorDark, backgroundContrastLight } from "../../static/Colors";
+import { accentColorDark } from "../../static/Colors";
 import {useTranslation} from "react-i18next";
 
 
