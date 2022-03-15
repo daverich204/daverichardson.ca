@@ -90,16 +90,6 @@ export default function BlogPost({post}) {
           </CardContent>
         </div>
       </div>
-      {/*<div style={styles.controls}>*/}
-      {/*  <Button*/}
-      {/*    aria-label="Read the article"*/}
-      {/*    style={styles.button}*/}
-      {/*    onClick={() => window.open(post.link, '_blank')}*/}
-      {/*  >*/}
-      {/*    {t('pages.blog.link_text')}*/}
-      {/*  </Button>*/}
-      {/*</div>*/}
-
     </Card>
   );
 }
