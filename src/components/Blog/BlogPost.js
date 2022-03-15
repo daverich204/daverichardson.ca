@@ -57,7 +57,7 @@ const styles = {
 };
 
 export default function BlogPost({post}) {
-  const { t } = useTranslation('translation');
+  // const { t } = useTranslation('translation');
 
   const image_url = post['_embedded']['wp:featuredmedia'] ?
     post['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.source_url : '';
