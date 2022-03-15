@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import moment from 'moment';
 
 import { accentColorDark } from "../../static/Colors";
-import {useTranslation} from "react-i18next";
+// import {useTranslation} from "react-i18next";
 
 
 const styles = {
@@ -74,7 +74,7 @@ export default function BlogPost({post}) {
         <div style={styles.details}>
           <CardContent style={styles.content}>
             <Typography component="h5" variant="h5">
-              <a href={post.link} target={"_blank"} title={'Read more'}>
+              <a href={post.link} target={"_blank"} rel={"noreferrer"} title={'Read more'}>
                 <span
                  dangerouslySetInnerHTML={{__html: post.title.rendered }}
                  style={{...styles.white, flexGrow: 1, textDecoration: 'underline'}}
