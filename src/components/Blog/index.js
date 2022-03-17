@@ -54,7 +54,7 @@ export default function Blog(props) {
             }
           })
           .then((posts= {}) => {
-            const { items } = posts;
+            const { items = [] } = posts;
             setBlogPosts(items);
           }).catch((exception) => {
             rollbar.error('Blog/index.js: Fetch Posts Exception', exception)
