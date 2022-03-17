@@ -37,19 +37,29 @@ export default function Blog(props) {
   const { t } = useTranslation('translation');
 
   const [blogPosts, setBlogPosts] = useState([]);
+  const [fetched, setFetched] = useState(false);
 
   useEffect(() => {
     const fetchTimeout = setTimeout(() => {
-      fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
-        .then((resp) => {
-          if (resp && resp.ok && resp.status === 200) {
-            return resp.json();
-          } else {
-            throw(resp);
-          }
-        })
-        .then((posts) => setBlogPosts(posts))
-        .catch((exception) => rollbar.error('Blog/index.js: Fetch Posts Exception', exception));
+
+      if(!blogPosts.length && !fetched) {
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@daverich204')
+          // fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
+          .then((resp) => {
+            if (resp && resp.ok && resp.status === 200) {
+              setFetched(true);
+              return resp.json();
+            } else {
+              throw(resp);
+            }
+          })
+          .then((posts= {}) => {
+            const { items } = posts;
+            setBlogPosts(items);
+          }).catch((exception) => {
+            rollbar.error('Blog/index.js: Fetch Posts Exception', exception)
+          });
+      }
     }, 250);
 
     return () => clearTimeout(fetchTimeout);
