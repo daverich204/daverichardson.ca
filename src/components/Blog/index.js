@@ -66,7 +66,7 @@ export default function Blog(props) {
     }, 250);
 
     return () => clearTimeout(fetchTimeout);
-  }, [blogPosts])
+  }, [blogPosts, fetched])
 
   const blogTitle = t('pages.blog.title');
 
