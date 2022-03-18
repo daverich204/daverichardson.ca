@@ -114,7 +114,7 @@ export default function Blog(props) {
       </div>
       <div className="grid-x">
         <div className="auto cell" />
-        <a href={'https://blog.daverichardson.ca'} target={'_blank'} rel={'noreferrer'}>
+        <a href={'https://blog.daverichardson.dev'} target={'_blank'} rel={'noreferrer'}>
           <Button variant="contained" color="secondary">
             {t('pages.blog.link_text')}!
           </Button>
