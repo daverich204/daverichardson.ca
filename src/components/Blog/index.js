@@ -32,6 +32,8 @@ const styles = {
   }
 };
 
+const BLOG_URL = 'https://blog.daverichardson.dev/feed'
+
 /* eslint-disable react/prefer-stateless-function */
 export default function Blog(props) {
   const { t } = useTranslation('translation');
@@ -43,22 +45,23 @@ export default function Blog(props) {
     const fetchTimeout = setTimeout(() => {
 
       if(!blogPosts.length && !fetched) {
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@daverich204')
-          // fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
-          .then((resp) => {
-            if (resp && resp.ok && resp.status === 200) {
-              setFetched(true);
-              return resp.json();
-            } else {
-              throw(resp);
-            }
-          })
-          .then((posts= {}) => {
-            const { items = [] } = posts;
-            setBlogPosts(items);
-          }).catch((exception) => {
-            rollbar.error('Blog/index.js: Fetch Posts Exception', exception)
-          });
+        // fetch('https://blog.daverichardson.ca/wp-json/wp/v2/posts?_embed&per_page=3')
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=${BLOG_URL}`)
+        .then((resp) => {
+          if (resp && resp.ok && resp.status === 200) {
+            setFetched(true);
+            return resp.json();
+          } else {
+            throw(resp);
+          }
+        })
+        .then((posts= {}) => {
+          console.log("posts => ", posts);
+          const { items = [] } = posts;
+          setBlogPosts(items);
+        }).catch((exception) => {
+          rollbar.error('Blog/index.js: Fetch Posts Exception', exception)
+        });
       }
     }, 250);
 
