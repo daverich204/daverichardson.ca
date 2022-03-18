@@ -56,7 +56,6 @@ export default function Blog(props) {
           }
         })
         .then((posts= {}) => {
-          console.log("posts => ", posts);
           const { items = [] } = posts;
           setBlogPosts(items);
         }).catch((exception) => {
