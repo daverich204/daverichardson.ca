@@ -76,7 +76,7 @@ export default function Blog(props) {
         {children}
       </Typist>
     )
-  }, [blogTitle]);
+  }, []);
 
   return (
     <div>
@@ -115,7 +115,7 @@ export default function Blog(props) {
       </div>
       <div className="grid-x">
         <div className="auto cell" />
-        <a href={'https://blog.daverichardson.ca'} target={'_blank'}>
+        <a href={'https://blog.daverichardson.ca'} target={'_blank'} rel={'noreferrer'}>
           <Button variant="contained" color="secondary">
             {t('pages.blog.link_text')}!
           </Button>
