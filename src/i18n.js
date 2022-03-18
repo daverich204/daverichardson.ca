@@ -8,11 +8,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // for passing in lng and translations on init
 
 const getLanguageByHostname = () => {
-  if(window.location.hostname.indexOf("dawei") >= 0) {
-    return "zh"
-  } else {
-    return "en"
-  }
+  return window.location.hostname.indexOf("dawei") >= 0 ? "zh" : "en";
 }
 
 i18n
