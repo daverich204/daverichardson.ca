@@ -28,7 +28,7 @@
     "lodash": "^4.17.15",
     "mdi-material-ui": "^6.23.0",
     "memory-cache": "^0.2.0",
-    "minimist": "1.2.3",
+    "minimist": "1.2.6",
     "moment": "^2.29.1",
     "offline-plugin": "^5.0.7",
     "prop-types": "^15.7.2",
