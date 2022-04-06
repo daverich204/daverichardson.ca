@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Stashing this.
+
+This version is getting stashed for possible work later, but looking at a total redesign
+
 ## Available Scripts
 
 In the project directory, you can run:
