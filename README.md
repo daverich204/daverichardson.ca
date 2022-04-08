@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This version is getting stashed for possible work later, but looking at a total redesign
 
+Next.js?
+
 ## Available Scripts
 
 In the project directory, you can run:
